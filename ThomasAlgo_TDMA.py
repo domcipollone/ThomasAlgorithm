@@ -10,9 +10,8 @@ def thomas_algorithm(lower, main, upper, b):
     Enjoy!
     """
 
-    # if np.abs(b) < np.abs(lower) + np.abs(upper):
-    #     raise Exception('Stability condition not met. The matrix is not diagonally dominant.')
     assert (np.abs(main) > (np.abs(lower) + np.abs(upper))), "The matrix must be diagonally dominant."
+    
     number_of_rows = len(b)
 
     l = np.zeros(number_of_rows)
